@@ -1,13 +1,19 @@
 <h1>Bienvenidos a mi proyecto {{title}}</h1>
 <button (click)="cambiarTitulo()">Cambiar título</button>
 <hr>
-Valor 1:<input type="number" #val1 value=0><br>
+Valor 1:<input type="number" #val1 value=0> 
 Valor 2:<input type="number" #val2 value=0><br>
 <button (click)="sumar(val1.value, val2.value)">Sumar</button><br>
 <p>La suma de {{val1.value}} + {{val2.value}} = {{suma}}</p>
 <hr>
 
-Valor 3:<input type="number" [(ngModel)]=val3 value=0><br>
+Valor 3:<input type="number" [(ngModel)]=val3 value=0>
 Valor 4:<input type="number" [(ngModel)]=val4 value=0><br>
 <button (click)="multiplicar()">Multiplicar</button><br>
 <p>La multiplicación de {{val3}} * {{val4}} = {{val3*val4}}</p> 
+<br>
+<br>
+Nombres:<input type="text" [(ngModel)]=nombres value="">
+Apellidos:<input type="text" [(ngModel)]=apellidos value=""><br>
+
+<button (click)="crearArreglo()">Crear arrglo</button> <p *ngFor="let numero of arreglo">{{numero}}</p>
